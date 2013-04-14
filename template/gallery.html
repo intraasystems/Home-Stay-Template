@@ -1,0 +1,203 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>
+BABY HOMESTAY
+</title>
+
+<link rel="canonical" href="http://www.homestayname.com" />
+
+<meta name="keywords" content="homestay name, Coorg homestay">
+<meta name="description" content="">
+<meta name="author" content="Kenith"> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<script language="JavaScript1.1">
+
+//specify interval between slide (in mili seconds)
+var slidespeed=3000
+//specify images
+var slideimages=new Array("pic/1.jpg","pic/2.jpg","pic/abby.jpg","pic/chiklihole.jpg","pic/dubare.jpg","pic/nagarahole.jpg","pic/tibet.jpg","pic/trek.jpg")
+//specify corresponding links
+var slidelinks=new Array("places4.html#k1","places4.html#k2","places1.html#k3","places3.html#k4","places3.html#k5","places3.html#k6","places2.html#k7","places3.html#k8")
+var newwindow=1 //open links in new window? 1=yes, 0=no
+var imageholder=new Array()
+var ie=document.all
+for (i=0;i<slideimages.length;i++){
+imageholder[i]=new Image()
+imageholder[i].src=slideimages[i]
+}
+
+function gotoshow(){
+if (newwindow)
+window.open(slidelinks[whichlink])
+else
+window.location=slidelinks[whichlink]
+}
+
+</script>
+
+
+<script language="JavaScript1.1">
+
+var slides = new Array(10); // the number in brackets defines how many images your gallery has got
+
+var j=0;
+
+for(var i=1; i<=10; i++)
+{
+
+   slides[i] = new Image();
+
+   slides[i].src = "images/" + i + ".jpg";
+
+}
+
+function Swap(number)
+
+{
+
+document.slide2.src = slides[number].src;
+
+}
+
+</script>
+
+<link rel="Stylesheet" type="text/css" href="optimistic.css" />
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+
+
+<div id="container" style="background: url(images/babyhomestay.jpg) left top no-repeat;">
+<div id="header">
+<h1>
+Baby Cottage
+</h1>
+<!-- TOP MENU -->
+<ul id="mainmenu">
+	<li><a href="index.html"><span>Home</span></a></li>
+	<li><a href="#"><span>About</span></a></li>
+	<li><a href="places1.html"><span>Places</span></a></li>
+	<li class="active"><a href="gallery.html"><span>Gallery</span></a></li>
+	<li ><a href="#"><span>Booking</span></a></li>
+</ul>
+<!-- TOP MENU END -->
+</br>
+</br>
+</br>
+</div>
+
+<div style="width: 445px;float: right;position: relative;">
+</br>
+</br>
+<div style= " text-align: center;">
+<img name="slide2" src="images/1.jpg" width="500" height="300" style="border:5px;"> </br>
+</br>
+</br>
+</div>
+</br>
+</br>
+</br>
+<b><p>Click on the Photos below to view them</p></b><br>
+<div style="float: right;position: relative;">
+
+<a href="javascript:Swap(1)"><img src="photo/1.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(2)"><img src="photo/2.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(3)"><img src="photo/3.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+<a href="javascript:Swap(4)"><img src="photo/4.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(5)"><img src="photo/5.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(6)"><img src="photo/6.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+<a href="javascript:Swap(7)"><img src="photo/7.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(8)"><img src="photo/8.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(9)"><img src="photo/9.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:Swap(10)"><img src="photo/10.jpg" width="120" height="100" border="0"></a>&nbsp;&nbsp;&nbsp;
+</div>
+
+</div>
+
+<div id="column">
+<div>
+<!-- NAVIGATION START -->
+
+<h3>Usefull Links</h3>
+<ul class="menu">
+	<li><a href="#">About Coorg</a></li>
+	<li><a href="#">Coorg Culture</a></li>
+	<li><a href="#">How to reach Coorg</a></li>
+	<li><a href="#">Coorgy dishes</a></li>
+</ul>
+
+<h3>Places</h3>
+
+<a href="javascript:gotoshow()"><img src="pic/1.jpg" name="slide" style="filter:blendTrans(duration=3) ;border:5px " width=190 height=140 ;
+ ></a>
+
+<script language="JavaScript1.1">
+
+var whichlink=0
+var whichimage=0
+var blenddelay=(ie)? document.images.slide.filters[0].duration*1000 : 0
+
+function slideit(){
+if (!document.images) return
+if (ie) document.images.slide.filters[0].apply()
+document.images.slide.src=imageholder[whichimage].src
+if (ie) document.images.slide.filters[0].play()
+whichlink=whichimage
+whichimage=(whichimage<slideimages.length-1)? whichimage+1 : 0
+setTimeout("slideit()",slidespeed+blenddelay)
+}
+slideit()
+
+</script>
+<br>
+<br>
+
+<h3>Google Map view</h3>
+
+<iframe width="190" height="140" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?q=12.182027,75.914876&amp;num=1&amp;t=h&amp;hl=en&amp;ie=UTF8&amp;z=14&amp;ll=12.184292,75.925484&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?q=12.182027,75.914876&amp;num=1&amp;t=h&amp;hl=en&amp;ie=UTF8&amp;z=14&amp;ll=12.184292,75.925484&amp;source=embed" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
+<br>
+<br>
+<h3>Contact Details</h3>
+
+<p style="text-align:left;">
+name</br>
+email</br>
+phone no
+
+</br>
+</p>
+
+<br>
+</div></div>
+
+
+
+<div id="footer">
+<br>
+<p>
+<!-- COPYRIGHT INOFRMATION -->
+Copyright &copy; 2012 <a href="mailto:kenith.777@gmail.com">kenith</a>.
+<!-- COPYRIGHT INOFRMATION END -->
+All Rights Reserved to Baby homestay
+</p>
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
